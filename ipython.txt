@@ -1,0 +1,120 @@
+In [1]: import pandas as pd
+
+In [2]: import randomforest
+
+In [3]: random
+randomforest      randomforest.py   randomforest.pyc  randomforest.py~
+
+In [3]: reload(randomforest)
+Out[3]: <module 'randomforest' from 'randomforest.py'>
+
+
+In [5]: reload(randomforest)
+Out[5]: <module 'randomforest' from 'randomforest.py'>
+
+In [6]: model, _, _, _ = randomforest.create_random_forest(nr_trees=22)
+[[ 1.          0.        ]
+ [ 1.          0.        ]
+ [ 1.          0.        ]
+ ..., 
+ [ 0.          1.        ]
+ [ 0.98863636  0.01136364]
+ [ 0.90909091  0.09090909]]
+pred_p is of type <type 'numpy.ndarray'>
+
+In [7]: model.
+model.apply                 model.n_classes_
+model.base_estimator        model.n_estimators
+model.bootstrap             model.n_features_
+model.classes_              model.n_jobs
+model.criterion             model.n_outputs_
+model.estimator_params      model.oob_score
+model.estimators_           model.predict
+model.feature_importances_  model.predict_log_proba
+model.fit                   model.predict_proba
+model.fit_transform         model.random_state
+model.get_params            model.score
+model.max_depth             model.set_params
+model.max_features          model.transform
+model.min_samples_leaf      model.verbose
+model.min_samples_split     
+
+In [7]: model.feature_importances_
+Out[7]: 
+array([ 0.12646823,  0.09564224,  0.0306975 ,  0.17514722,  0.17574152,
+        0.2393987 ,  0.00247619,  0.1544284 ,  0.        ])
+
+
+
+In [9]: imp = _7
+
+In [10]: imp
+Out[10]: 
+array([ 0.12646823,  0.09564224,  0.0306975 ,  0.17514722,  0.17574152,
+        0.2393987 ,  0.00247619,  0.1544284 ,  0.        ])
+
+In [11]: randomfore
+randomforest      randomforest.py   randomforest.pyc  randomforest.py~
+
+In [11]: randomforest.df.head.
+randomforest.df.head.im_class  randomforest.df.head.im_self
+randomforest.df.head.im_func   
+
+In [11]: list(randomforest.df)[0]
+Out[11]: 'medium'
+
+In [12]: list(randomforest.df)
+Out[12]: 
+['medium',
+ 'DaysLastVisits',
+ 'Device',
+ 'numVisits',
+ 'TotalEvents',
+ 'Pageviews',
+ 'Sessions',
+ 'Unique Pageviews',
+ 'Label',
+ 'is_train']
+
+In [13]: len(_)
+Out[13]: 10
+
+In [14]: len(imp)
+Out[14]: 9
+
+In [15]: zip(imp, _12)
+Out[15]: 
+[(0.12646823108833655, 'medium'),
+ (0.095642239829405326, 'DaysLastVisits'),
+ (0.030697504800425542, 'Device'),
+ (0.17514722416790282, 'numVisits'),
+ (0.17574151638032079, 'TotalEvents'),
+ (0.23939869637714184, 'Pageviews'),
+ (0.0024761883151491288, 'Sessions'),
+ (0.15442839904131792, 'Unique Pageviews'),
+ (0.0, 'Label')]
+
+In [16]: list(sorted(zip(imp, _12)))
+Out[16]: 
+[(0.0, 'Label'),
+ (0.0024761883151491288, 'Sessions'),
+ (0.030697504800425542, 'Device'),
+ (0.095642239829405326, 'DaysLastVisits'),
+ (0.12646823108833655, 'medium'),
+ (0.15442839904131792, 'Unique Pageviews'),
+ (0.17514722416790282, 'numVisits'),
+ (0.17574151638032079, 'TotalEvents'),
+ (0.23939869637714184, 'Pageviews')]
+
+In [17]: for w, s in sorted(zip(imp, _12)):
+   ....:     print '%s, %f' % (s, w)
+   ....:     
+Label, 0.000000
+Sessions, 0.002476
+Device, 0.030698
+DaysLastVisits, 0.095642
+medium, 0.126468
+Unique Pageviews, 0.154428
+numVisits, 0.175147
+TotalEvents, 0.175742
+Pageviews, 0.239399

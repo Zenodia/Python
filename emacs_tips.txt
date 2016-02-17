@@ -1,0 +1,5 @@
+C-x C-f -> open new file
+C-g -> quit things
+C-x b -> Switch buffers
+
+Always use TAB.

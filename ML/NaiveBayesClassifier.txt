@@ -1,0 +1,26 @@
+"this file is for NaiveBayesClassifier.py using iPython to call this python script
+In [1]: filename='diabets.csv'
+
+In [2]: splitRatio=0.67
+
+In [3]: import NaiveBayesClassifier
+
+In [4]: dataset=NaiveBayesClassifier.loadCsv(filename)
+
+In [5]: trainingSet,testset=NaiveBayesClassifier.splitDataset(dataset,splitRatio)
+
+In [6]: summaries=NaiveBayesClassifier.su
+NaiveBayesClassifier.summarize         NaiveBayesClassifier.summarizeByClass
+
+In [6]: summaries=NaiveBayesClassifier.summarizeByClass(trainingSet)
+
+In [7]: predictions=NaiveBayesClassifier.getPredictions(summaries,testset)
+
+In [8]: accuracy=NaiveBayesClassifier.getAccuracy(t
+%%time       %tb          %timeit      trainingSet  tuple        
+%%timeit     %time        testset      try          type         
+
+In [8]: accuracy=NaiveBayesClassifier.getAccuracy(testset,predictions)
+
+In [9]: print ('Accuracy: {0}%').format(accuracy)
+Accuracy: 76.7716535433%
